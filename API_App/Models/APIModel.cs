@@ -18,8 +18,8 @@ namespace API_App.Models
         public string IncCountryName { get; set; }
         public string TradeLicUpd { get; set; }
         public string DUNSNo { get; set; }
-        public decimal AnnTurnover { get; set; }
-        public int CurrencyID { get; set; }
+        public decimal? AnnTurnover { get; set; }
+        public int? CurrencyID { get; set; }
         public string CurrencyName { get; set; }
         public string AccessType { get; set; }
         public string NoEmp { get; set; }
@@ -65,10 +65,7 @@ namespace API_App.Models
         [DisplayName("Website")]
         public string Website { get; set; }
 
-        [Required]
-        [StringLength(4000)]
-        [DataType(DataType.Text)]
-        [DisplayName("Trade Licence No")]
+      
         public string TradeLicenceNo { get; set; }
         public int CompanyTypeID { get; set; }
 
@@ -94,10 +91,6 @@ namespace API_App.Models
         public string TelNo { get; set; }
         public int DesignationID { get; set; }
 
-        [Required]
-        [StringLength(100)]
-        [DataType(DataType.Text)]
-        [DisplayName("First Name")]
         public string BusinessActivity { get; set; }
 
         [Required]
@@ -156,7 +149,7 @@ namespace API_App.Models
 
       
 
-        public int IndustryID { get; set; }
+        public int ?IndustryID { get; set; }
 
         [Required]
         [DisplayName("Turn Over Amt")]

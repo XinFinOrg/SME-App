@@ -20,5 +20,12 @@
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: 100%;
+}
+.padoff{
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+label {
+    font-weight:100;
 }

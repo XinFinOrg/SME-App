@@ -54,7 +54,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-md-2 onlinelabels" for="textinput">Trade License Number&nbsp;<span style="color:red;width:50px;">*</span></label>
+                        <label class="col-md-2 onlinelabels" for="textinput">License Number&nbsp;<span style="color:red;width:50px;"></span></label>
                         <div class="col-md-3">
                             @Html.TextBoxFor(m => m.TradeLicenceNo, new { @class = "form-control", maxlength = "200", autocomplete = "off" })
                         </div>
@@ -96,7 +96,7 @@
                         </div>
                         <div class="col-md-1"></div>
                         <div class="">
-                            <label class="col-md-2 onlinelabels" for="textinput">Trade License Issuing Authority&nbsp;<span style="color:red;width:50px;">*</span></label>
+                            <label class="col-md-2 onlinelabels" for="textinput">License Issuing Authority&nbsp;<span style="color:red;width:50px;">*</span></label>
                             <div class="col-md-3">
                                 @Html.TextBoxFor(m => m.AuthCountry, new { @class = "form-control", maxlength = "200", autocomplete = "off" })
 
@@ -106,17 +106,22 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-md-2 onlinelabels" for="textinput">Business Activities&nbsp;<span style="color:red;width:50px;">*</span></label>
+                        <label class="col-md-2 onlinelabels" for="textinput">Business Activities&nbsp;<span style="color:red;width:50px;"></span></label>
                         <div class="col-md-3">
                             @Html.TextBoxFor(m => m.BusinessActivity, new { @class = "form-control", maxlength = "200", autocomplete = "off" })
                         </div>
                         <div class="col-md-1"></div>
                         <div class="">
-                            <label class="col-md-2 onlinelabels" for="textinput">Copy of Trade License&nbsp;<span style="color:red;width:50px;"></span><a tabindex="0" class="" role="button" data-toggle="popover" data-trigger="focus" data-content="Only allow files like *.jpg,*.png,*.doc,*.pdf"><span class="glyphicon glyphicon-info-sign"></span></a></label>
+                            <label class="col-md-2 onlinelabels" for="textinput">Number of Employees&nbsp;<span style="color:red;width:50px;"></span></label>
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.NoEmp, new { @class = "form-control", maxlength = "200", autocomplete = "off" })
+                            </div>
+                            <div class="col-md-1"></div>
+                            @*<label class="col-md-2 onlinelabels" for="textinput">Copy of Trade License&nbsp;<span style="color:red;width:50px;"></span><a tabindex="0" class="" role="button" data-toggle="popover" data-trigger="focus" data-content="Only allow files like *.jpg,*.png,*.doc,*.pdf"><span class="glyphicon glyphicon-info-sign"></span></a></label>
                             <div class="col-md-3">
                                 <input type="file" name="TradeLicUpd" id="TradeLicUpd" class="" />
                             </div>
-                            <div class="col-md-1"></div>
+                            <div class="col-md-1"></div>*@
                         </div>
                     </div>
 
@@ -135,16 +140,6 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                       
-                        <div class="">
-                            <label class="col-md-2 onlinelabels" for="textinput">Number of Employees&nbsp;<span style="color:red;width:50px;"></span></label>
-                            <div class="col-md-3">
-                                @Html.TextBoxFor(m => m.NoEmp, new { @class = "form-control", maxlength = "200", autocomplete = "off" })
-                            </div>
-                            <div class="col-md-1"></div>
-                        </div>
-                    </div>
                     <div class="col-sm-12" style="padding-bottom:2%;"></div>
                     <div class="col-md-12" style="font-size:larger; margin-left: -18px;"><u><b> PRIMARY CONTACT INFORMATION</b></u></div>
                     <div class="col-sm-12" style="padding-bottom:1%;"></div>
@@ -194,7 +189,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-md-2 onlinelabels" for="textinput">E-mail ID (Business)&nbsp;<span style="color:red;width:50px;">*</span></label>
+                        <label class="col-md-2 onlinelabels" for="textinput">E-mail ID&nbsp;<span style="color:red;width:50px;">*</span></label>
                         <div class="col-md-3">
                             @Html.TextBoxFor(m => m.EmailID, new { @class = "form-control", maxlength = "200", autocomplete = "off" })
                         </div>
@@ -312,10 +307,10 @@
         }
         var Email = $("#EmailID").val();
         var ConfirmEmailID = $("#ConfirmEmailID").val();
-        if (!isEmailGood(Email)) {
-            alert("Must be Business email")
-            return false;
-        }
+        //if (!isEmailGood(Email)) {
+        //    alert("Must be Business email")
+        //    return false;
+        //}
         if (Email != ConfirmEmailID) {
             alert("Email dosen't match !!");
             return false;
@@ -338,10 +333,10 @@
         var Email = $("#EmailID").val();
         var ConfirmEmailID = $("#ConfirmEmailID").val();
 
-        if (!isEmailGood(Email)) {
-            alert("Must be Business email")
-            return false;
-        }
+        //if (!isEmailGood(Email)) {
+        //    alert("Must be Business email")
+        //    return false;
+        //}
         if (ConfirmEmailID != "")
             if (Email == ConfirmEmailID) {
                 $("#result").html("<span id='spanGreen' style='color:green'><i class='fa fa-check 3x'></i></span>");

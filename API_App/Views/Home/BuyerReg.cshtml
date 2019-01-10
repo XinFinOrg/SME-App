@@ -89,7 +89,7 @@
                         </div>
                         <div class="col-md-1"></div>
                         <div class="">
-                            <label class="col-md-2 onlinelabels" for="textinput">Website&nbsp;<span style="color:red;width:50px;">*</span></label>
+                            <label class="col-md-2 onlinelabels" for="textinput">Website&nbsp;<span style="color:red;width:50px;"></span></label>
                             <div class="col-md-3">
                                 @Html.TextBoxFor(m => m.Website, new { @class = "form-control", maxlength = "200", autocomplete = "off" })
                             </div>
@@ -104,7 +104,7 @@
                         </div>
                         <div class="col-md-1"></div>
                         <div class="">
-                            <label class="col-md-2 onlinelabels" for="textinput">Annual Sales Volume<br /> to the Buyer &nbsp;<span style="color:red;width:50px;">*</span></label>
+                            <label class="col-md-2 onlinelabels" for="textinput">Annual Sales Volume&nbsp;<span style="color:red;width:50px;"></span></label>
                             <div class="col-md-3">
                                 <div class="col-md-5 padoff">
                                     @Html.DropDownListFor(model => model.CurrencyID, new SelectList(ViewBag.DDLCurrencyID, "CurrencyID", "CurrencyCode", Model.CurrencyID), "--Select--", new { @class = "form-control validate[required]" })
@@ -163,13 +163,13 @@
                     <div class="col-md-12" style="font-size:larger; margin-left: -18px;"><u><b>BUYER – PRIMARY CONTACT DETAILS</b></u></div>
                     <div class="col-sm-12" style="padding-bottom:1%;"></div>
                     <div class="form-group">
-                        <label class="col-md-2 onlinelabels" for="textinput">First Name&nbsp;<span style="color:red;width:50px;"></span></label>
+                        <label class="col-md-2 onlinelabels" for="textinput">First Name&nbsp;<span style="color:red;width:50px;">*</span></label>
                         <div class="col-md-3">
                             @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", maxlength = "200", autocomplete = "off" })
                         </div>
                         <div class="col-md-1"></div>
                         <div class="">
-                            <label class="col-md-2 onlinelabels" for="textinput">Last Name&nbsp;<span style="color:red;width:50px;"></span></label>
+                            <label class="col-md-2 onlinelabels" for="textinput">Last Name&nbsp;<span style="color:red;width:50px;">*</span></label>
                             <div class="col-md-3">
                                 @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", maxlength = "200", autocomplete = "off" })
                             </div>
@@ -177,13 +177,13 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-md-2 onlinelabels" for="textinput">Designation&nbsp;<span style="color:red;width:50px;"></span></label>
+                        <label class="col-md-2 onlinelabels" for="textinput">Designation&nbsp;<span style="color:red;width:50px;">*</span></label>
                         <div class="col-md-3">
                             @Html.DropDownListFor(model => model.DesignationID, new SelectList(ViewBag.DDLDesignationID, "DesignationID", "DesignationName", Model.DesignationID), "--Select--", new { @class = "form-control validate[required]" })
                         </div>
                         <div class="col-md-1"></div>
                         <div class="">
-                            <label class="col-md-2 onlinelabels" for="textinput">Mobile Number&nbsp;<span style="color:red;width:50px;"></span></label>
+                            <label class="col-md-2 onlinelabels" for="textinput">Mobile Number&nbsp;<span style="color:red;width:50px;">*</span></label>
                             <div class="col-md-3">
                                 @Html.TextBoxFor(m => m.MobileNo, new { @class = "form-control tel", maxlength = "200", autocomplete = "off", type = "tel" })
                             </div>
@@ -206,7 +206,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label class="col-md-2 onlinelabels" for="textinput">E-mail ID (Business)&nbsp;<span style="color:red;width:50px;">*</span></label>
+                        <label class="col-md-2 onlinelabels" for="textinput">E-mail ID &nbsp;<span style="color:red;width:50px;">*</span></label>
                         <div class="col-md-3">
                             @Html.TextBoxFor(m => m.EmailID, new { @class = "form-control", maxlength = "200", autocomplete = "off" })
                         </div>
